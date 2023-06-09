@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+header {
+    background-color: #ffa83b;
+    text-align: center;
+    margin: 0;
+    color: white;
+    font-size: 1.5rem;
+    line-height: 1rem;
+    padding: .5rem 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search-form {
+    margin: 0;
+    width: 100%;
+    background-image: url("https://wallpaperaccess.com/full/2305227.jpg");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-form ul {
+    margin: 0;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    width: 40%;
+    border-bottom: white solid 3px;
+    padding-bottom: .5rem;
+    color: white;
+    padding-left: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.search-form ul li {
+    font-weight: bold;
+    text-align: center;
+    width: 4rem;
+    text-wrap: normal;
 }
 
-.App-link {
-  color: #61dafb;
+.search-fields {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-fields input {
+    width: 40%;
+    border-radius: .3rem;
+    height: 2rem;
+    padding: 0 .5rem;
+}
+
+.search-form button[type="submit"] {
+    background-color: #ffa83b;
+    border: none;
+    border-radius: .3rem;
+    width: 10%;
+    font-size: 1rem;
+    line-height: 2rem;
+    height: 2.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.businesses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem 4rem;
+}
+
+.business {
+    width: 25%;
+    margin: 1rem;
+}
+
+.business img {
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.business h4 {
+    margin: .3rem 0;
+}
+
+.business-info {
+    display: flex;
+    width: 100%;
+}
+
+.business-info .rating {
+    text-align: right;
+    width: 40%;
+}
+
+.business-info .rating > *, .business-info .address > * {
+    margin: 0;
+    line-height: 1.2rem;
+}
+
+.business-info p {
+    font-size: .8rem;
+}
+
+.business-info .address {
+    width: 60%;
 }
