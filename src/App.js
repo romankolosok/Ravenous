@@ -1,7 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import BusinessList from "./BusinessList";
 import SearchBar from "./SearchBar";
+import React from "react";
 
 const data = {
     imageSrc: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',

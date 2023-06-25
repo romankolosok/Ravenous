@@ -24,11 +24,10 @@ header {
 
 .search-form ul {
     margin: 0;
-    display: flex;
+    display: grid;
     list-style-type: none;
-    justify-content: space-around;
+    grid-template-columns: 1fr 1fr 1fr;
     width: 40%;
-    border-bottom: white solid 3px;
     padding-bottom: .5rem;
     color: white;
     padding-left: 0;
@@ -37,8 +36,11 @@ header {
 .search-form ul li {
     font-weight: bold;
     text-align: center;
-    width: 4rem;
+    border-bottom: white solid 3px;
+    width: 100%;
+    padding: .5rem 0;
     text-wrap: normal;
+    word-break: break-word;
 }
 
 .search-fields {
@@ -51,6 +53,7 @@ header {
 .search-fields input {
     width: 40%;
     border-radius: .3rem;
+    border: none;
     height: 2rem;
     padding: 0 .5rem;
 }
@@ -77,6 +80,7 @@ header {
 .business {
     width: 25%;
     margin: 1rem;
+    min-width: 400px;
 }
 
 .business img {
@@ -111,3 +115,16 @@ header {
 .business-info .address {
     width: 60%;
 }
+
+.search-form input[type="radio"]:checked+label {
+    color: #ffa83b;
+}
+
+.search-form input[type="radio"] {
+    display: none;
+}
+
+.search-form ul li:has(input[type="radio"]:checked) {
+    border-bottom: #ffa83b 3px solid;
+}
+
