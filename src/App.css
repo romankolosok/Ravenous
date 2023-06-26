@@ -128,3 +128,12 @@ header {
     border-bottom: #ffa83b 3px solid;
 }
 
+.search-form label {
+    cursor: pointer;
+}
+
+.search-form button[type="submit"] {
+    cursor: pointer;
+}
+
+

@@ -1,7 +1,7 @@
 import './App.css';
 import BusinessList from "./BusinessList";
 import SearchBar from "./SearchBar";
-import React from "react";
+import React, {useState, useEffect} from "react";
 
 const data = {
     imageSrc: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
@@ -18,13 +18,19 @@ const data = {
 const listOfBusinesses = [data, data, data, data, data, data]
 
 function App() {
+    const [businessList, setBusinessList] = useState([])
+
+    // useEffect(() => {
+    //     navigator.geolocation.getCurrentPosition(()
+    // }, [])
+
   return (
       <>
           <header>
               <h3>ravenous</h3>
           </header>
-          <SearchBar/>
-          <BusinessList listOfBusinesses={listOfBusinesses}/>
+          <SearchBar fetchBusiness={setBusinessList}/>
+          <BusinessList listOfBusinesses={businessList}/>
       </>
   );
 }
